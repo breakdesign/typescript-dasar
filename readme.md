@@ -7,6 +7,12 @@ Sebelum memulai pastikan beberapa Apps berikut terinstal
 - Text Editor yang mendukung pemrograman typescript (contoh: Visual Studio Code)
 - NPM / Yarn (Penulis: menggunakan Yarn)
 
+## Usage
+
+- Untuk Generate Build Project dengan cara `yarn ts`
+- Untuk melihat hasil file ts, dengan cara `node build/index.js` -> sesuaikan lokasi filenya
+- untuk menjalankan terus menerus, bisa dengan cara `yarn dev`
+
 ## 1. Installation
 
 - Jalankan `yarn init` di terminal untuk membuat `package.json`
@@ -23,30 +29,29 @@ Sebelum memulai pastikan beberapa Apps berikut terinstal
 
 - Install Package `nodemon` dengan cara `yarn add global nodemon` atau `npm install -g nodemon`
 - Jalankan perintah berikut `./node_modules/.bin/tsc --init` untuk membuat file `tsconfig.js`
-
 - Rubah beberapa script berikut:
 
 `"allowJs": true`
 `"outDir": "./build"` -> set lokasi build project anda
 
-- Untuk Generate Build Project dengan cara `yarn ts`
-- Untuk melihat hasil file ts, dengan cara `node build/index.js` -> sesuaikan lokasi filenya
-- untuk menjalankan terus menerus, bisa dengan cara `yarn dev`
 
-## Usage
+## 2. Type Data
+Isi value dari variable di typescript akan otomatis mendeklarasikan tipe datanya contoh:
+- `let angka = 123` -> maka variable `angka` bertipe data `numberic`
+- `let alamat = "jalan buntu"` -> maka variable `alamat` bertipe data `string`
 
-```python
-import foobar
+Deklarasi Tipe Data di typescript bisa menggunakan 2 cara:
+1. `let nama: string` -> cara standard deklarasi variable di typescript( langsung menentukan tipe datanya `string` )
+1. `let nama = "Rizky"` -> cara standard mendeklarasikan variable di javascript
+2. `let nama: string = "Rizky"` -> cara standard deklarasi variable di typescript( langsung menentukan tipe datanya `string` )
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+Contoh Tipe Data di TypeScript:
+- String      -> `let nama: string`           -> Tipe data menampung semua huruf angka dan karakter spesial
+- Number      -> `let umur: number`           -> Tipe data menampung angka saja
+- Boolean     -> `let sudahMenikah: boolean`  -> Tipe data menampung nilai `true` atau `false`
+- Any         -> `let bebas: any`             -> Tipe data menampung segala tipe data
+- Array       -> `let bank: any[]`            -> Tipe data array menampung berbagai tipedata
+- Array Tuple -> `let tuple: [string, number]`-> Tipe data array yang memiliki panjang array terbatas
+- Object      -> `let object = {angka:"satu"}`-> Tipe data Object menampung 1 key angka dengan isi string
+- Enum        -> `enum typeEnum = {JAN, FEB}` -> Meng Assign value ke key, jika tidak ada value dari key maka akan di isi indexnya dimulai dari 0
+- Union       -> `let phone: number | string` -> Variable Phone ini bisa menampung 2 tipe data `number` dan `string`

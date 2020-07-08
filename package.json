@@ -1,0 +1,24 @@
+{
+  "name": "typescript-dasar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "rm -rf build/ && tsc",
+    "ts": "rm -rf build/ && tsc -w",
+    "dev": "nodemon ./build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breakdesign/typescript-dasar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breakdesign/typescript-dasar/issues"
+  },
+  "homepage": "https://github.com/breakdesign/typescript-dasar#readme",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
+}
